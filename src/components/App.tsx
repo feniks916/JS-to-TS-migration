@@ -34,17 +34,17 @@ const App: React.FC = () => {
         <div className="logo" />
         <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
           <Menu.Item key="1" icon={<UserOutlined />}>
-          <NavLink to="/">
+          <NavLink to="/test/">
                 <span>Main</span>
               </NavLink>
             </Menu.Item>
           <Menu.Item key="2" icon={<VideoCameraOutlined />}>
-          <NavLink to="/map">
+          <NavLink to="/test/map">
                 <span>Map</span>
               </NavLink>
             </Menu.Item>
           <Menu.Item key="3" icon={<UploadOutlined />}>
-          <NavLink to="/timer">
+          <NavLink to="/test/timer">
                 <span>Timer</span>
               </NavLink>
             </Menu.Item>
@@ -66,13 +66,13 @@ const App: React.FC = () => {
           }}
         >
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/test">
               <Form />
             </Route>
-            <Route path="/map">
+            <Route path="/test/map">
               <MapComponent data={coordinates} />
             </Route>
-            <Route path="/timer">
+            <Route path="/test/timer">
               <Timer data={time} />
             </Route>
           </Switch>
